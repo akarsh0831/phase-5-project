@@ -22,6 +22,15 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'fast_jsonapi'
+gem 'bcrypt'
+gem 'graphql'
+gem 'graphql-batch'
+gem 'graphiql-rails', group: :development
+gem 'pry'
+
+group :development, :test do
+  gem 'rspec-rails',      ">= 2.0.0.beta"
+end
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
