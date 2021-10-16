@@ -6,9 +6,12 @@ module Authable
     end
   
     def current_user
-      return nil unless session[:user_id]
-  
-      @current_user ||= User.find(session[:user_id])
+        puts 'SESSION:'
+        puts session[:user_id]
+        # return nil unless session[:user_id]
+    
+        # @current_user ||= User.find(session[:user_id])
+        @current_user ||= User.find(1)
     end
   
     def authenticate

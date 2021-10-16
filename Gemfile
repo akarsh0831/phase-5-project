@@ -27,6 +27,7 @@ gem 'graphql'
 gem 'graphql-batch'
 gem 'graphiql-rails', group: :development
 gem 'pry'
+gem 'sidekiq'
 
 group :development, :test do
   gem 'rspec-rails',      ">= 2.0.0.beta"
@@ -38,6 +39,8 @@ end
 gem 'bootsnap', '>= 1.4.4', require: false
 
 group :development, :test do
+  gem 'factory_bot_rails'
+  gem 'rspec_junit_formatter'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end

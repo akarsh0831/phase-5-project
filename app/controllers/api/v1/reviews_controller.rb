@@ -5,13 +5,14 @@ module Api
   
         # POST /api/v1/reviews
         def create
-          review = current_user.reviews.new(review_params)
-  
-          if review.save
-            render json: serializer(review)
-          else
-            render json: errors(review), status: 422
-          end
+            puts current_user
+            review = current_user.reviews.new(review_params)
+    
+            if review.save
+                render json: serializer(review)
+            else
+                render json: errors(review), status: 422
+            end
         end
   
         # DELETE /api/v1/reviews/:id

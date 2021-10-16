@@ -1,6 +1,8 @@
 import axios from 'axios'
 
-const token = document.querySelector('[name="csrf-token"]') || {content: 'no-csrf-token'}
+const token = document.querySelector('meta[name="csrf-token"]') || {content: 'no-csrf-token'}
+console.log("TOKEN")
+console.log(token)
 const AxiosWrapper = axios.create({
   headers: {
     common: {

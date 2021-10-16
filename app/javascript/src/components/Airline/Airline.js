@@ -62,7 +62,7 @@ const Airline = (props) => {
     e.preventDefault()
 
     const airline_id = parseInt(airline.data.id)
-    AxiosWrapper.post('/api/v1/reviews', { ...review, airline_id })
+    AxiosWrapper.post('/api/v1/reviews', { ...review, airline_id }, { withCredentials: true })
     .then( (resp) => {
       setReviews([...reviews, resp.data.data])
       setReview({ title: '', description: '', score: 0 })
